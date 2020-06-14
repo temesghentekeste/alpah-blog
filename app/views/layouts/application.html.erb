@@ -11,7 +11,7 @@
 
   <body>
     <%= render 'layouts/navigation'%>
-    <%= render 'layouts/messages' %>
+    <%= render 'layouts/messages' unless @disable_message %>
     <div class="container-fluid main-content px-0">
       <%= yield %>
     </div>

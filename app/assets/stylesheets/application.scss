@@ -20,7 +20,7 @@
   "success": #015668,
   "info": #0F81C7,
   "warning": #0DE2EA,
-  "danger": #06648C,
+  "danger": #ff0000,
   "light": #ececec,
   "dark": #222222
 );
@@ -72,7 +72,7 @@ body {
     align-items: center;
     flex-direction: column;
     border-radius: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .jumbotron h1 {
@@ -94,6 +94,10 @@ body {
     flex: 1;
 }
 
+.errors h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
 footer ul {
     list-style: none;
