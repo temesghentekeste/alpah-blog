@@ -94,6 +94,18 @@ body {
     flex: 1;
 }
 
+.article-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.article-body{
+
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+
+}
+
 .errors h2 {
     font-size: 1.2rem;
     font-weight: 600;
