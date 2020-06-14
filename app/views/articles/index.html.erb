@@ -13,9 +13,9 @@
             <tr>
             <td> <%= article.title %> </td>        
             <td> <%= article.description %></td>
-            <td> <%= link_to "Edit", edit_article_path(article), class: "btn btn-success" %></td>
-            <td> <%= link_to "Show", article_path(article), class: "btn btn-info" %></td>
-            <td> <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %></td>
+            <td> <%= link_to "Edit", edit_article_path(article), class: "btn btn-success btn-sm" %></td>
+            <td> <%= link_to "Show", article_path(article), class: "btn btn-info btn-sm" %></td>
+            <td> <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm" %></td>
             </tr>
         <% end %>
     </table>
