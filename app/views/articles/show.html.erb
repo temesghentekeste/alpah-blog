@@ -1,11 +1,13 @@
-<h1>Showing selected article </h1>
+<div class="container p-4 mt-4">
+  <h1 class="text-center">Showing selected article </h1>
 
-<p> 
-  Title: <%= @article.title %>
-</p>
+  <p> 
+    Title: <%= @article.title %>
+  </p>
 
-<p> 
-  Description: <%= @article.description %>
-</p>
-<%= link_to "Edit this article", edit_article_path(@article)%> |
-<%= link_to "Back to articles listing", articles_path%>
+  <p> 
+    Description: <%= @article.description %>
+  </p>
+  <%= link_to "Edit this article", edit_article_path(@article)%> |
+  <%= link_to "Back to articles listing", articles_path%>
+</div>
