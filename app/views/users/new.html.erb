@@ -1,36 +1,4 @@
-<div class="container">
-<h1 class="text-center">Signup for Alpha Blog</h1>
-<%= render "shared/errors", obj: @user%>
-  <div class="row">
-      <div class="col-sm-8 mx-auto">
-          <%= form_for(@user , :html => { class: "form-horizontal", rol: "form"}) do |f| %>
-              <div class="form-group">
-                  <%= f.label :username, class: "col-form-label" %>
-                  <div class="">
-                      <%= f.text_field :username, class: "form-control", placeholder: "Enter username",  autofocus: true  %>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <%= f.label :email, class: "col-form-label" %>
-                  <div class="">
-                      <%= f.email_field :email,class: "form-control", placeholder: "Enter email" %>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <%= f.label :password, class: "col-form-label" %>
-                  <div class="">
-                      <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
-                  </div>
-              </div>
-              <div class="form-group">
-                      <%= f.submit "Sign up", class:"btn btn-primary" %>
-              </div>
-          <% end %>
-          <div class="col-xs-4 text-center ">
-              [ <%= link_to "Cancel request and return to articles listing", articles_path, class: "text-info"%> ]
-          </div>
-      </div>
-  </div>
-</div>
+<h1 class="text-center">Sign up for Alpha Blog</h1>
 
+<%= render 'form'%>
 
