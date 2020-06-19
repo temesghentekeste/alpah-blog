@@ -5,6 +5,23 @@
     </h1>
     <div class="card card-inverse col-12  border-0 p-4">
       <div class="card-block">
+      <% if @article.user %>
+       <ul class="listing text-center">
+        <div class="row">
+          <div class="col-md-4 offset-md-4 p-3">
+            <li>Created by:</li>
+            <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+            <li class="card-title">
+              <%= link_to @article.user.username, user_path(@article.user)%>
+            </li>
+            <li>
+              <small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small>
+            </li>
+          </div>
+        </div>
+      </ul>
+      <% end %>
+     
         <h4 class="card-text"><strong>Description:</strong></h4>
         <hr>
         <%= simple_format(@article.description) %>
