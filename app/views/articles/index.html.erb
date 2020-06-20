@@ -1,5 +1,20 @@
 <h1 class="text-center">Listing all articles</h1>
+<div class="container mt-5 ">
+ <div class="row justify-content-center m-0">
+  <div class="col-2 mb-0">
+   <%= will_paginate%>
+  </div>
+ </div>  
+</div>
 <%= render 'article', obj: @articles %>
+
+<div class="container">
+ <div class="row justify-content-center m-0">
+  <div class="col-2 mb-0">
+   <%= will_paginate%>
+  </div>
+ </div>  
+</div>
 
 
     
