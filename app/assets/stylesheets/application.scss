@@ -66,13 +66,14 @@ body {
     background-image: linear-gradient(rgba(#000, 0.4), rgba(#000, .6)),asset-url("banner.jpg");
     background-size: cover;
     background-position: center;
-    height: 610px;
+    height: 720px;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 0;
     margin: 0;
+    margin-top: -10rem
 }
 
 .jumbotron h1 {
