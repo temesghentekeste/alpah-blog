@@ -26,6 +26,23 @@
           </div>
         </li>
       <% end %>
+
+       <li class="nav-item dropdown mr-2">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "All Categories", categories_path, class: "dropdown-item hovered"%>
+            <div class="dropdown-divider"></div>
+            <% Category.all.each do |category| %>
+              <%= link_to "#{category.name}", category_path(category), class: "dropdown-item hovered" %>
+            <% end %>
+            <% if logged_in? and current_user.admin? %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "New Category", new_article_path, class: "dropdown-item hovered"%>
+            <% end %>
+          </div>
+        </li>
     </ul>
       <form class="form-inline my-2 my-lg-0 mr-auto">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
