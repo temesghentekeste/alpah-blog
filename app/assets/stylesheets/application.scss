@@ -39,6 +39,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .navbar-custom {
@@ -66,7 +70,7 @@ body {
     background-image: linear-gradient(rgba(#000, 0.4), rgba(#000, .6)),asset-url("banner.jpg");
     background-size: cover;
     background-position: center;
-    height: 720px;
+    height: 100vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -95,6 +99,12 @@ body {
     flex: 1;
 }
 
+.main-title {
+    font-size: 4rem;
+}
+
+
+
 .article-meta-details {
     border-top: 1px solid #eaeaea;
     margin-top: 1rem;
@@ -102,7 +112,7 @@ body {
 
 .article-title {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2.5rem;
 }
 
 .article-body{
@@ -167,5 +177,14 @@ footer a:hover {
 .dropdown-menu .dropdown-item:hover{
     background: map_get($theme-colors, 'primary');
     color: map_get($theme-colors, 'light');
+}
+
+@media only screen and (max-width: 768px){
+   
+    .article-title {
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: red;
+    }
 }
 

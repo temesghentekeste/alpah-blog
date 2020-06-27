@@ -1,11 +1,7 @@
 <h1 class="text-center mb-4">All Alpha Bloggers</h1>
-<div class="container">
- <div class="row justify-content-center m-0">
-  <div class="col-2 mb-0">
+ <div class="d-flex justify-content-center m-0">
    <%= will_paginate%>
-  </div>
  </div>  
-</div>
 
 <div class="text-center">
   <% @users.each do |user| %>
@@ -32,10 +28,7 @@
   <% end %>
 
 </div>
-<div class="container">
- <div class="row justify-content-center m-0">
-  <div class="col-2 mb-0">
+
+ <div class="d-flex justify-content-center  my-4 mt-2">
    <%= will_paginate%>
-  </div>
- </div>  
-</div>
+ </div> 
