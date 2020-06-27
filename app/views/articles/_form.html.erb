@@ -16,6 +16,11 @@
                 </div>
             </div>
             <div class="form-group">
+                <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+                    <% cb.label(class: "checkbox-inline input_checkbox mr-4") {cb.check_box(class: "checkbox") +" #{cb.text}"} %>
+                <% end %>
+            </div>
+            <div class="form-group">
                     <%= f.submit class:"btn btn-primary" %>
             </div>
         <% end %>
