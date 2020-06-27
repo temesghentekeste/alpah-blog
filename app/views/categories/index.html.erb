@@ -10,6 +10,9 @@
           <div class="article-title">
             <%= link_to category.name, category_path(category), class: "text-info"%>
           </div>
+          <div class="card-footer py-2">
+            <small><%= link_to pluralize(category.articles.count, "article"), category_path(category)%></small>
+          </div>
         </div>
       </div>
     </div>

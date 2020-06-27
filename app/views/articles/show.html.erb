@@ -24,6 +24,10 @@
      
         <h4 class="card-text"><strong>Description:</strong></h4>
         <hr>
+        <% if @article.categories.any? %>
+          <p>Categories: <%= render @article.categories %></p>
+        <% end %>
+          <hr>
         <%= simple_format(@article.description) %>
           <hr>
           <% if logged_in? && (current_user == @article.user || current_user.admin?)%>
