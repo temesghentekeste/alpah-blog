@@ -39,7 +39,7 @@
             <% end %>
             <% if logged_in? and current_user.admin? %>
               <div class="dropdown-divider"></div>
-              <%= link_to "New Category", new_article_path, class: "dropdown-item hovered"%>
+              <%= link_to "New Category", new_category_path, class: "dropdown-item hovered"%>
             <% end %>
           </div>
         </li>
