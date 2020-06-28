@@ -1,11 +1,12 @@
-<nav class="navbar navbar-expand-lg bg-dark text-white">
-  <%# <a class="navbar-brand" href="#">Alpha Blog</a> %>
+<nav class="navbar navbar-expand-lg fixed-top nav-menu bg-dark text-white mb-4">
   <%= link_to "Alpha blog", root_path, class: "navbar-brand"%>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon text-white"></span>
+  <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+    <div class="bg-light line1"></div>
+    <div class="bg-light line2"></div>
+    <div class="bg-light line3"></div>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="navbar-nav">
       <li>
         <%= link_to "Articles", articles_path, class:"nav-link"%>

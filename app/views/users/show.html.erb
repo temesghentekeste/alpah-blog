@@ -1,4 +1,6 @@
-<h1 class="text-center">Welcome to <%= @user.username%>'s page</h1>
+<h1 class="text-center font-weight-bold text-warning mb-0 mt-5">
+Welcome to <span class="text-primary"><%= @user.username%>'s</span> page
+</h1>
 
 <div class="container">
   <div class="row">
@@ -8,12 +10,10 @@
   </div>
 </div>
 
-<div class="container">
-<h4 class="text-center mt-3"><%= @user.username%>'s articles</h4>
+<h4 class="text-center mt-3 font-weight-bold"><%= @user.username%>'s articles</h4>
  <div class="d-flex justify-content-center mt-5">
    <%= will_paginate @user_articles%>
  </div>  
 <%= render 'articles/article', obj: @user_articles %>
 <div class="d-flex justify-content-center m-3 mb-5">
    <%= will_paginate @user_articles%>
-</div>

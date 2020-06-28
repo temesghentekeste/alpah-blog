@@ -1,9 +1,11 @@
-<h1 class="text-center"><%= "Category: " + @category.name %></h1>
+<h1 class="text-center font-weight-bold text-warning mb-0 mt-5">
+  Category:&nbsp;<span class="text-primary"><%=@category.name %></span>
+</h1>
 <div class="container mt-2">
   <% if logged_in? and current_user.admin? %>
-    <div class="text-center mb-4">
-        <%= link_to "Edit Category Name", edit_category_path(@category)%>
-    </div>
+    <small class="text-center  mb-4 d-block">
+        <%= link_to "Edit Category Name", edit_category_path(@category), class: "text-info font-weight-bold"%>
+    </small>
   <% end %>
   <div class="d-flex justify-content-center mt-5 mb-2">
    <%= will_paginate @category_articles%>

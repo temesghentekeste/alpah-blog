@@ -1,7 +1,7 @@
 <div class="container p-4 mt-4">
  <div class="row">
-    <h1 class="col-12 mb-3 text-center"> 
-      Title: <%= @article.title %>
+    <h1 class="col-12 text-center font-weight-bold text-warning mb-5 mt-5"> 
+      Title:&nbsp;<span class="text-primary"> <%= @article.title %></span>
     </h1>
     <div class="card card-inverse col-12  border-0 p-4">
       <div class="card-block">
@@ -9,14 +9,16 @@
        <ul class="listing text-center">
         <div class="row">
           <div class="col-md-4 offset-md-4 p-3">
-            <li>Created by:</li>
+            <li class="font-weight-bold">Created by:</li>
             <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
-            <li class="card-title">
+            <li class="card-title mb-0 font-weight-bold">
               <%= link_to @article.user.username, user_path(@article.user)%>
             </li>
-            <li>
-              <small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small>
-            </li>
+            <%  if @article.user.articles  %>
+              <li class="mt-0">
+                <small><%= link_to pluralize(@article.user.articles.count, "article"), user_path(@article.user), class:"text-info"%></small>
+              </li>
+            <% end %>
           </div>
         </div>
       </ul>
@@ -25,7 +27,7 @@
         <h4 class="card-text"><strong>Description:</strong></h4>
         <hr>
         <% if @article.categories.any? %>
-          <p>Categories: <%= render @article.categories %></p>
+          <small class="font-weight-bold">Categories: <%= render @article.categories %></small>
         <% end %>
           <hr>
         <%= simple_format(@article.description) %>

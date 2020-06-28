@@ -15,11 +15,11 @@
  */
  $body-bg: #e2e2e2;
  $theme-colors: (
-  "primary": #ff304f,
+  "primary": #f33f7b,
   "secondary": #CACACA,
   "success": #015668,
   "info": #0F81C7,
-  "warning": #0DE2EA,
+  "warning": rgb(12, 140, 144),
   "danger": #ff0000,
   "light": #ececec,
   "dark": #222222
@@ -39,14 +39,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-family: sans-serif;
 
 }
 
-.navbar-custom {
-    background: #08088a;
+.navbar-menu {
+    background: linear-gradient(rgba(#000, .3), rgba(#000, .5));
+    padding: 30px;
 }
 
 .navbar-brand {
@@ -66,27 +66,49 @@ body {
     color: white;
 }
 
-.jumbotron{
+ .line1, .line2, .line3{
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+}
+
+.change .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change.line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.banner{
     background-image: linear-gradient(rgba(#000, 0.4), rgba(#000, .6)),asset-url("banner.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 600px;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 0;
     margin: 0;
-    margin-top: -10rem
+    margin-top: -10rem;
+   
 }
 
-.jumbotron h1 {
+.banner h1 {
     color: #fff;
     margin: 2rem;
 }
 
 .btn-signup {
     transition: ease-in-out .3s;
+}
+
+.btn-primary:hover {
+    background:  #c30d68;
 }
 
 .btn-signup:hover {
@@ -103,7 +125,9 @@ body {
     font-size: 4rem;
 }
 
-
+.article-body {
+    font-size: 1.6rem;
+}
 
 .article-meta-details {
     border-top: 1px solid #eaeaea;
@@ -112,13 +136,20 @@ body {
 
 .article-title {
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+}
+
+
+
+a.text-info {
+    color: red;
 }
 
 .article-body{
 
     border-top: 1px solid #cacaca;
     border-bottom: 1px solid #cacaca;
+    font-size: 1.4rem;
 
 }
 
@@ -128,7 +159,7 @@ body {
 }
 
 .badge {
-    background: map_get($theme-colors, 'info');
+    background: map_get($theme-colors, 'warning');
     margin-right: 0.5rem;
     padding: 0.3rem 0.6rem;
     text-transform: uppercase;
@@ -183,8 +214,9 @@ footer a:hover {
    
     .article-title {
         font-weight: bold;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         color: red;
     }
+
 }
 

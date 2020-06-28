@@ -17,3 +17,9 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+$(document).ready(()=>{
+  $('.nav-button').click(()=>{
+    $('.nav-button').toggleClass('change')
+  })
+})
