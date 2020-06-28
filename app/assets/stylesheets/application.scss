@@ -44,9 +44,15 @@ body {
 
 }
 
+.main-heading {
+    font-size: 4rem;
+}
+
 .navbar-menu {
-    background: linear-gradient(rgba(#000, .3), rgba(#000, .5));
-    padding: 30px;
+    background: linear-gradient(rgba(#000, .8), rgba(#000, .9));
+    // padding: 30px;
+    // margin-top: 0;
+    // margin-bottom: 5rem;
 }
 
 .navbar-brand {
@@ -64,6 +70,7 @@ body {
 
 .nav-link {
     color: white;
+    font-size: 1.2rem;
 }
 
  .line1, .line2, .line3{
@@ -80,9 +87,10 @@ body {
     opacity: 0;
 }
 
-.change.line3 {
+.change .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
 .banner{
     background-image: linear-gradient(rgba(#000, 0.4), rgba(#000, .6)),asset-url("banner.jpg");
     background-size: cover;
@@ -123,6 +131,10 @@ body {
 
 .main-title {
     font-size: 4rem;
+}
+
+.page-heading {
+    font-size: 2.5rem;
 }
 
 .article-body {
@@ -192,12 +204,26 @@ a.text-info {
     font-weight: 600;
 }
 
+.text-cancel {
+    font-size: 1.5rem;
+}
+
+.flash-message{
+    font-size: 1rem;
+}
+
+footer {
+    font-size: 1rem;
+}
+
 footer ul {
     list-style: none;
 }
 
 footer a {
     color: #fff;
+    white-space: nowrap;
+   
 }
 
 footer a:hover {
@@ -211,12 +237,32 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 768px){
-   
     .article-title {
         font-weight: bold;
         font-size: 1.8rem;
         color: red;
     }
+}
 
+@media only screen and (max-width: 600px){
+    .main-heading {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .page-heading {
+        font-size: 1.6rem;
+    }
+
+    a.text-cancel {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .main-heading {
+        font-size: 2rem;
+    }
 }
 

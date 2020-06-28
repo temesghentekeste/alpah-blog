@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top nav-menu bg-dark text-white mb-4">
+<nav class="navbar navbar-expand-xl fixed-top navbar-menu text-white mb-4">
   <%= link_to "Alpha blog", root_path, class: "navbar-brand"%>
   <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
     <div class="bg-light line1"></div>
@@ -21,9 +21,9 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to "New article", new_article_path, class: "dropdown-item hovered"%>
-            <a class="dropdown-item" href="#">Another action</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <%= link_to "View all Categories", categories_path, class: "dropdown-item hovered"%>
+            <%= link_to "View all users", users_path, class: "dropdown-item hovered"%>
           </div>
         </li>
       <% end %>
@@ -45,11 +45,8 @@
           </div>
         </li>
     </ul>
-      <form class="form-inline my-2 my-lg-0 mr-auto">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    <ul class="navbar-nav mr-5">
+     
+    <ul class="navbar-nav mr-5 ml-auto">
      <% if logged_in?  %>
         <li class="nav-item">
           <%= link_to "Log out", logout_path, method: :delete, class:"nav-link"%>
@@ -61,7 +58,8 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item hovered"%>
             <%= link_to "View your profile", user_path(current_user), class: "dropdown-item hovered"%>
-            <a class="dropdown-item" href="#">Another action</a>
+            <%= link_to "Log out", logout_path, method: :delete, class:"dropdown-item hovered"%>
+
           </div>
         </li>
       <% else %>
@@ -76,3 +74,5 @@
       
   </div>
 </nav>
+
+

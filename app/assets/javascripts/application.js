@@ -18,7 +18,8 @@
 //= require popper
 //= require bootstrap-sprockets
 
-$(document).ready(()=>{
+// Using turboliks:load
+$( document ).on('turbolinks:load', ()=>{
   $('.nav-button').click(()=>{
     $('.nav-button').toggleClass('change')
   })

@@ -1,13 +1,13 @@
-<h1 class="text-center mb-4">All Alpha Bloggers</h1>
+<h1 class="page-heading text-center font-weight-bold mb-5 mt-5">All Alpha Bloggers</h1>
  <div class="d-flex justify-content-center m-0">
    <%= will_paginate%>
  </div>  
 
-<div class="text-center">
+<div class="text-center mt-0">
   <% @users.each do |user| %>
     <ul class="listing">
       <div class="row justify-content-center mx-0">
-        <div class="card col-8 p-3 m-4">
+        <div class="card col-11 col-md-8 p-3 m-2">
           <li><%= link_to gravatar_for(user), user_path(user) %></li>
           <li class="article-title">
             <%= link_to user.username, user_path(user), class: "text-info"%>
